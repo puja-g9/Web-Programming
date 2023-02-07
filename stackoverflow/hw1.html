@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stack overflow</title>
+	<style>
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+
+		body
+		{
+			font-family: "Helvetica";
+		}
+
+		.topbar
+		{
+			display: flex;
+			align-items: center;
+			background-color: rgb(248,249,249);
+			border: 100px;
+			/*border-width: 100px;*/
+			padding: 10px;
+            margin-top: 10px;
+			/*flex-grow: 5;*/
+      box-shadow: 0 2px 4px 1px lightgray;
+		}
+
+		.topbar .item
+		{
+			
+			display: flex;
+			flex-direction: row;
+			
+
+		}
+
+		.item
+		{
+			padding-left: 20px;	
+			color: gray;
+			font-weight: normal;
+		}
+
+		.item img
+		{
+			margin: 0px;
+			padding-right: 10px;
+		}
+        
+        .itemL
+        { 
+        	border: 1px solid rgb(57,115,157);
+        	border-top-left-radius: 5px;
+        	border-top-right-radius: 5px;
+        	border-bottom-left-radius: 5px;
+        	border-bottom-right-radius: 5px;
+        	background-color: rgb(225,236,244);
+        	padding: 10px;
+			color: rgb(57,115,157);
+			font-weight: normal;
+
+        }
+
+        .itemS
+        { 
+        	margin: 5px;
+        	border: 1px solid rgb(184,207,223);
+        	border-top-left-radius: 5px;
+        	border-top-right-radius: 5px;
+        	border-bottom-left-radius: 5px;
+        	border-bottom-right-radius: 5px;
+        	background-color: rgb(10,149,255);
+
+        	padding: 10px;
+			color: white;
+			font-weight: normal;
+
+        }
+
+
+        .sidebar
+        {
+        	display: flex;
+			align-items: center;
+        }
+
+        .menubar
+        {
+        	display: flex;
+        	flex-direction: column;
+          padding-bottom: 450px;
+        	/*width:250px;
+        	height: 500px;*/
+        	
+        }
+
+        .menubar .ele
+        { 
+        	display: flex;
+        	align-items: center;
+
+          padding-left: 50px;
+          margin: 15px;
+          color: gray;
+         
+          
+        }
+
+        .menubar .ele1
+        {
+        	display: flex;
+            align-items: center;
+          /*padding-bottom: 10px;*/
+          margin-left:50px;
+        	padding-left: 12px;
+        	font-weight: bold;
+        	color:black;
+        	background: rgb(241,242,243);
+
+
+        }
+
+        /*.ele1 img
+        {
+        	padding-left: 10px;
+        }*/
+
+
+        .eleT
+        {
+          padding-left: 70px;
+          margin:10px;
+          font-size: 15px;
+          color: gray;
+        }
+
+        .eleU
+        {
+          padding-left: 70px;
+          margin:10px;
+          font-size: 15px;
+          color: gray;
+        }
+
+        .menubar .ele2
+        {
+        	display: flex;
+            align-items: center;
+
+        	padding-left: 60px;
+        	/*font-weight: bold;*/
+        	color:gray;
+        	/*background: rgb(241,242,243);*/
+        }
+
+        .ele2 img
+        {
+        	padding-left: 30px;
+        }
+
+        .ele3
+        {
+        	display: flex;
+            align-items: center;
+
+        	/*padding-left: 30px;*/
+        	/*font-weight: bold;*/
+        	color:gray;
+        }
+
+        .ele3 img
+        {
+        	padding-left: 40px;
+        	font-size: 10px;
+        	margin:10px;
+        }
+        
+        .eleJ
+        {
+          padding-left: 70px;
+          margin:10px;
+          font-size: 15px;
+          color: gray;
+        }
+
+         .eleC
+        {
+          padding-left: 70px;
+          margin:10px;
+          font-size: 15px;
+          color: gray;
+        }
+
+        .ele4
+        {
+        	font-size: 15px;
+        	padding-left: 50px;
+          margin: 15px;
+          color: gray;
+
+        }
+
+        .eleTeams
+        {
+        	padding-left: 35px;
+        	margin:30px;
+        	color: gray;
+        }
+
+        .boxtxt1
+        {
+          /*width:100px;
+          height: 300px;*/
+         
+          border: 1px solid  lightgray;
+          width:170px;
+          background-color: white;
+          /*padding-left: 185px;*/
+          margin-left: 45px;
+          padding: 10px;
+          color: gray;
+
+          
+        }
+
+        .boxtxt1 span
+        {
+          padding-top: 10px;
+          color: black;
+          font-weight: bold;
+        }
+
+        .boxtxt1 img
+        {
+          margin: 10px;
+        }
+
+        .boxtxt1 .ca
+        {
+          margin: 5px;
+          border: 1px solid rgb(184,207,223);
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          background-color: rgb(10,149,255);
+
+          padding: 10px;
+          color: white;
+      /*font-weight: normal;*/
+        }
+
+        .boxtxt1 .teams
+        {
+          text-align: center;
+          margin-bottom: 10px;
+          color: gray;
+        }
+
+
+
+
+        .vline
+        {
+         width:2px;
+         height: 900px;
+         background-color: lightgray;
+         position: absolute;
+         left:17.5%;
+        /* padding-right:2px;*/
+        }
+
+        .middle
+        {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .upperbar
+        {
+        	display: flex;
+			text-align: justify;
+      flex-direction: column;
+       margin-left:20px;
+       
+       margin-bottom: 700px;
+        }
+        
+        .upperbar h1
+        { 
+           color: black;
+            /*font-family: "Helvetica";*/
+            font-weight: lighter;  
+             padding-left: 5px;
+
+
+
+        }
+
+        .txt
+        {
+          display: flex;
+          flex-direction: column;
+
+        }
+
+        .upperbar .txt1
+        {
+          margin-top: 2px;
+          padding-right: 2px; 
+
+        }
+        
+        
+
+        
+
+       .txt2
+        {
+         /*padding-left: 650px;*/
+        /* margin: 5px;*/
+         
+          border: 1px solid rgb(184,207,223);
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          background-color: rgb(10,149,255);
+          width:100px;
+          height: 30px;
+          margin-left: 900px;
+          padding-top: 10px;
+          padding-left: 10px;
+          margin-bottom: 2px;
+      color: white;
+      font-weight: normal;
+
+        }
+
+        .txt3
+        {
+          padding-top: 20px;
+          
+        }
+        
+        .txt1
+        {
+          display: flex;
+          flex-direction: column;
+          margin-bottom:10px;
+        }
+
+
+        
+        .txt1 span
+        {
+          color:gray;
+          padding-left:10px;
+          
+
+        }
+
+        .middlebar 
+        {
+          display: flex;
+          flex-direction: row;
+          
+        }
+
+        
+        .middlebar h3
+        {
+          margin-top: 10px;
+          color: black;
+          font-weight: lighter;
+          font-size: 120%;
+        }
+
+        .rowmid
+        {
+          margin-top: 20px;
+          /*margin-bottom: 20px;*/
+        }
+
+        .middlebar .rowmid .rw1
+        {
+           margin-top: 20px;
+         background-color: rgb(246, 246, 246);
+        }
+        
+        .middlebar .rowmid .rw2
+        {
+          border: 0px solid black;
+          width:700px;
+          position: right;
+          margin-top: 20px;
+          font-weight: lighter;
+          padding-left: 0px;
+          /*word-spacing: 10px;*/
+
+        }
+
+
+
+        .rw2 .r1
+        {
+
+          word-spacing: 1px;
+        }
+        .rw2 .r2
+        {
+          word-spacing: 2px;
+        }
+        .rw2 .r3
+        {
+          word-spacing: 3px;
+        }
+        .rw2 .r4
+        {
+          word-spacing: 3px;
+        }
+        .rw2 .r5
+        {
+          padding-top: 20px;
+          word-spacing: 6px;
+        }
+        
+        .rw2 span
+        {
+          border:1px solid rgb(225,236,244);
+          background-color: rgb(225,236,244);
+        }
+
+        .pitch
+        {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .pp1
+        {
+          display: flex;
+         /* flex-direction: column;*/
+         border:1px solid rgb(241,230,189);
+         background-color: rgb(251, 243, 213);
+         width:280px;
+         margin-top: 20px;
+         margin-left: 20px;
+
+         height: 30px;
+         border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+          border-bottom-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+
+        }
+        
+        .p1
+        {
+          margin-top: 5px;
+           margin-left: 20px;
+           font-size: 80%;
+           font-weight: bold;
+
+        }
+
+        .pitch .pt
+        {
+          display: flex;
+          flex-direction: row;
+        }
+
+
+        .pp2
+        {
+          display: flex;
+          flex-direction: column;
+
+
+         border:1px solid rgb(241,230,189);
+         background-color: rgb(253,247,226);
+         width:280px;
+         /*margin-top: 20px;*/
+         margin-left: 20px;
+         height: 130px;
+         border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+          border-bottom-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+
+        }
+
+        .p22 
+        {
+          /*margin-top: 5px;*/
+          font-size: 75%;
+          word-spacing: 3px;
+          margin-right: 5px;
+        }
+        .p22 span
+        {
+          padding-left: 35px;
+        }
+
+        .p24 
+        {
+          margin-top: 10px;
+          font-size: 75%;
+          word-spacing: 3px;
+          margin-right: 5px;
+        }
+        .p24 span
+        {
+          padding-left: 35px;
+        }
+
+        .pp3
+        {
+          display: flex;
+         /* flex-direction: column;*/
+         border:1px solid rgb(241,230,189);
+         background-color: rgb(251, 243, 213);
+         width:280px;
+        /* margin-top: 20px;*/
+         margin-left: 20px;
+
+         height: 30px;
+         border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+          border-bottom-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+
+        }
+
+        .pw1
+        {
+          margin-top: 5px;
+           margin-left: 20px;
+           font-size: 80%;
+           font-weight: bold;
+        }
+        
+           .pw3
+          {
+          display: flex;
+          flex-direction: column;
+
+
+         border:1px solid rgb(241,230,189);
+         background-color: rgb(253, 247, 226);
+         width:280px;
+         /*margin-top: 20px;*/
+         margin-left: 20px;
+         height: 85px;
+         border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+          border-bottom-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+          }
+
+          .pw2 
+        {
+          margin-top: 10px;
+          font-size: 75%;
+          word-spacing: 3px;
+          margin-right: 5px;
+        }
+        .pw4
+        {
+          margin-top: 10px;
+          font-size: 75%;
+          word-spacing: 3px;
+          margin-right: 5px;
+
+        }
+
+         .hum
+          {
+          display: flex;
+          flex-direction: column;
+
+
+         border:1px solid lightgray;
+         background-color: rgb(248,249,249);
+         width:280px;
+         margin-top: 30px;
+         margin-left: 20px;
+         height: 30px;
+
+         border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+          border-bottom-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+          }
+
+          .hu1
+          { 
+            color: gray;
+            margin-top: 5px;
+           margin-left: 20px;
+           font-size: 90%;
+           /*font-weight: bold;*/
+
+          }
+
+         .hh
+          {
+          display: flex;
+          flex-direction: column;
+
+
+         border:1px solid lightgray;
+         /*background-color: rgb(253, 247, 226);*/
+         /*width:280px;*/
+         margin-top: 10px;
+         /*margin-left: 1px;*/
+         /*height: 0px;*/
+         border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+          border-bottom-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+          }
+
+          .h11
+          {
+            color: gray;
+            margin-top: 5px;
+           margin-left: 20px;
+           font-size: 80%;
+          padding-top: 10px;
+
+          }
+
+          .h12
+          {
+            color: gray;
+            margin-top: 5px;
+           margin-left: 20px;
+           font-size: 70%;
+
+          }
+          
+          .h12 span
+          {
+            color: lightgray;
+            font-weight: bold;
+          }
+
+          .h13 img
+          {
+            padding-left: 10px;
+          }
+
+          .h14 
+          {
+            color: gray;
+            margin-top: 5px;
+           margin-left: 20px;
+           font-size: 90%;
+            
+          }
+
+          .h15 
+          {
+            color: gray;
+            margin-top: 5px;
+           margin-left: 20px;
+           font-size: 70%;
+           padding-bottom: 10px;
+            
+          }
+
+           .h15 span
+          {
+            color: lightgray;
+            font-weight: bold;
+          }
+
+
+
+        
+       
+         
+	</style>
+		
+
+</head>
+
+
+<body>
+     <div class="topbar">
+
+     	  <div class="item ">
+     	  	<img src="1.png"> 
+          </div>
+
+     	  <div class="item">
+     	  	<p>About</p>
+     	  	
+     	  </div>
+     	  <div class="item">
+     	  	<p>Products</p>
+     	  </div>
+
+     	  <div class="item">
+     	    <p>For Teams</p>
+     	  </div>
+
+     	  <div class="item">
+     	  	<img src="2.png"> 
+          </div>
+
+          <div class="itemL">
+     	  	<p>Log in</p> 
+          </div>
+
+          <div class="itemS">
+     	  	<p>Sign up</p> 
+          </div>
+     </div>
+       
+       <div class="vline"></div>
+            </div>
+
+
+       
+        
+       
+
+      <div class="sidebar">
+      
+      	   
+
+      	    <div class="menubar">
+               
+
+               <div class="ele">
+               	<p>Home </p>
+               </div>
+
+               <div class="ele">
+               	<p>Public </p>
+               </div>
+                
+            <div class="ele1">
+                <img src="4.png">
+               	<p>Questions </p>
+               	<img src="9.png">
+            </div>
+
+               
+               <div class="eleT">
+               	<p>Tags </p>
+               </div>
+               <div class="eleU">
+               	<p>Users </p>
+               </div>
+
+               <div class="ele2">
+               <p>Collectives </p>
+               <img src="7.png">
+               </div>
+
+               <div class="ele3">
+               	<img src="8.png">
+               <p>Explore Collectives </p>
+               </div>
+
+               <div class="ele4">
+               	<p>FIND A JOB</p>
+               </div>
+
+               <div class="eleJ">
+               	<p>Jobs </p>
+               </div>
+
+               <div class="eleC">
+               	<p>Companies </p>
+               </div>
+
+               <div class="eleTeams">
+               	<p>TEAMS </p>
+               </div>
+
+               <div class="boxtxt1">
+                <p> <span> Stack Overflow for Teams</span> 
+                  -Collaborate and share knowledge with a private group
+                </p>
+                <img src="10.png">
+                <div class="ca">
+                <p> Create a free team</p>
+                </div>
+                <div class="teams">
+                  <p> What is Teams? </p>
+                </div>
+
+               </div>
+
+        </div>
+  
+
+         <div class="middle">
+        <div class="upperbar">
+          <div class="txt">
+        	   <div class="txt3">
+             <h1> How to use Flexbox? </h1>
+        	   </div>
+
+             <div class="txt2">
+             <p> Ask Question </p>
+             </div>
+          </div>
+
+        
+          <div class="txt1">
+            <p> <span>Asked</span> 4 years, 5 months ago 
+              <span>Active</span> 3 years, 5 months ago 
+              <span> Viewed</span> 777 timies
+            </p>
+          </div>
+           
+           <hr>
+
+           <div class=" middlebar">
+            <div class="m1">
+              <img src="11.png">
+
+            </div>
+
+            <div class="rowmid">
+              <h3> I have a layout like this: </h3>
+              <div class= "rw1">
+                <p>
+                  <img src="c1.png">
+                 
+                </p>
+              </div>
+
+              <div class="rw2">
+                <div class="r1">
+                <p>
+                  I have to aling the <span>div</span>s like: All the <span>div</span>s with "outer" class has to start from new line and all the </p>
+                </div>
+
+                <div class="r2">
+                  <p><span>div</span>s with "inner" class has to be in the same line within "outer" <span>div</span> and the <span>div</span>s with deeper </p>
+                </div>
+                   
+                  <div class="r3">
+                  <p>class inside "outer" <span>div</span> should start from new line and "newLineContent" <span>div</span>s has to be in </p>
+                </div>
+
+                 <div class="r4">
+                  <p>the same line within "deeper" <span>div</span>s
+                </p>
+              </div>
+              <div class="r5">
+                <p>
+                  How can I achieve this using flexbox? or is this any other way to achieve it?
+                </p>
+              </div>
+              </div>
+            </div>
+
+            <div class="pitch">
+                <div class="pp1">
+                  <div class="p1">
+                      <p> The Overflow Blog </p>
+                   </div>
+              </div>
+               
+                <div class="pt">
+              <div class="pp2">
+                <!-- <div class="p21">
+               
+                </div> -->
+                <div class="p22">
+                 <p> <img src="pen.png"> Introducing Content Health, a new way to</p>
+                 <span> keep the knowledge base up-to-date
+                 </span> </p>
+                </div>
+                <!-- <div class="p23">
+                
+                </div> -->
+                <div class="p24">
+                 <p> <img src="pen.png"> Podcast 394: what if you could invest in
+                  <span> your favorite developer?</span>
+                 </p>
+                </div>
+              </div>
+            </div>
+
+              <div class="pp3">
+                <div class="pw1">
+                    <p> Featured on Meta</p>
+                </div>
+              </div>
+
+             <div class="pw3">
+              <div class="ppw3">
+                <!-- <div class="p21">
+               
+                </div> -->
+                <div class="pw2">
+                 <p> <img src="wind.png"> Now Line: A fully responsive profile</p>
+                </div>
+                <!-- <div class="p23">
+                
+                </div> -->
+                <div class="pw4">
+                 <p> <img src="wind.png"> Reducing the weight of our footer
+                 </p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="hum">
+              <div class="hu1">
+                <p> 34 people chatting</p>
+              </div>
+              <div class="hh">
+              <div class="h11">
+                <p>Tamil iOs, Web and Phonegap Developers
+                </p>
+              </div>
+
+              <div class="h12">
+                <p> <span> 8 hours ago</span> - jafarbtech
+                </p>
+              </div>
+
+              <div class="h13">
+                <img src="hum1.png">
+              </div>
+
+              <div class="h14">
+                <p>HTML /CSS /WebDesign </p>
+              </div>
+
+              <div class="h15">
+                <p><span>2 days ago</span> - Rana</p>
+              </div>
+            </div>
+          </div>
+
+
+          </div>
+            
+
+
+        </div>
+        </div>
+        </div>
+        </div>
+
+ 
+      
+
+</body>
+</html>

@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*body
+		{
+			font-family: "Helvetica";
+		}
+		.top
+		{
+			display: flex;
+			flex-direction: row;
+			border: 1px solid white;
+			background: white;
+			/*align-items: center;*/
+		}
+
+		.top1
+		{     
+			align-items:  center;
+			display: flex;
+			flex-direction: row;
+			margin-top: 5px;
+			margin-left: 100px;
+			margin-bottom: 5px;
+			border: 1px solid rgb(246,247,248);
+			background: rgb(246,247,248);
+			width: 800px;
+			height: 45px;
+
+		}
+
+		.top1 span
+		{
+			/*padding-bottom: 30px;*/
+			color: rgb(117,117,157);
+			font-family: "Helvetica";
+
+		}
+		/*.login
+        { 
+        	border: 1px solid rgb(57,115,157);
+        	border-top-left-radius: 25px;
+        	border-top-right-radius: 25px;
+        	border-bottom-left-radius: 25px;
+        	border-bottom-right-radius: 25px;
+        	background-color: rgb(225,236,244);
+        	padding: 10px;
+			color: rgb(57,115,157);
+			font-weight: normal;
+			height: 25px;
+			width:70px;
+
+        }*/
+        
+        .login
+        { 
+        	align-items: center;
+        	margin-left: 50px;
+        	border: 2px solid rgb(0,121,211);
+        	margin-right: 5px;
+        	margin-top: 5px;
+        	margin-bottom: 5px;
+        	height: 45px;
+        	width:130px;
+        	color: rgb(0,121,211);
+        	font-family: "Sans-serif";
+        	font-weight: bold;
+        	border-bottom-left-radius:25px;
+        	border-bottom-right-radius:25px;
+        	border-top-right-radius:25px;
+        	border-top-left-radius:25px;
+        }
+
+        .login span
+        {
+        	
+        	padding-left: 25px;
+        	padding-bottom: 45px;
+        	align-items: center;
+        	font-family: "Arial";
+
+        }
+
+        .signup
+        { 
+        	align-items: center;
+        	margin-left: 30px;
+        	border: 2px solid rgb(0,121,211);
+        	margin-right: 30px;
+        	margin-top: 5px;
+        	margin-bottom: 10px;
+        	height: 45px;
+        	width:140px;
+        	color: white;
+        	background: rgb(0,121,211);
+        	font-family: "Sans-serif";
+        	font-weight: bold;
+        	border-bottom-left-radius:25px;
+        	border-bottom-right-radius:25px;
+        	border-top-right-radius:25px;
+        	border-top-left-radius:25px;
+        }
+
+        .signup span
+        {
+        	
+        	padding-left: 25px;
+        	padding-bottom: 45px;
+        	align-items: center;
+        	font-family: "Arial";
+
+        }
+
+        .main
+        {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+       .mid
+       {
+       	display: flex;
+       	flex-direction: row;
+       	background: rgb(218,224,230);
+       	height: 1000px;
+       }
+
+       .midl1
+       {
+          display: flex;
+          flex-direction: column;
+          padding-left: 150px;
+          border:1px solid rgb(218,224,230);
+          width:700px;
+       }
+       
+       .midl1 span
+       {
+
+        font-family: "Helvetica";
+
+       }
+
+         .m
+       {
+        display: flex;
+        flex-direction: row;
+         border: 1px solid rgb(246,247,248);
+         background: white;
+         width: 700px;
+        height: 50px;
+
+       }
+
+
+       /*.m1
+       {
+          display: flex;
+        flex-direction: row;
+          border: 1px solid rgb(246,247,248);
+        
+         width: 80px;
+        height: 50px;
+        background: white;
+       }*/
+       .a1
+       {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid rgb(246,247,248);
+        background: rgb(246,247,248);
+        color: rgb(79,162,223);
+         border-bottom-left-radius: 25px;
+         border-bottom-right-radius: 25px;
+         border-top-left-radius: 25px;
+         border-top-right-radius: 25px;
+         
+         height: 35px;
+         width: 80px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+       }
+
+      
+
+       .a1 img
+       {
+        padding: 5px;
+
+       }
+       .a1 span
+       {
+        padding-bottom: 10px;
+        font-family: "Helvetica";
+        font-weight: bold;
+       }
+
+       .m2
+       {
+          display: flex;
+        flex-direction: row;
+        border: 1px solid white;
+        height: 35px;
+        background: white;
+       }
+
+       .a2
+       {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid rgb(246,247,248);
+        background: rgb(246,247,248);
+        color: rgb(79,162,223);
+         border-bottom-left-radius: 25px;
+         border-bottom-right-radius: 25px;
+         border-top-left-radius: 25px;
+         border-top-right-radius: 25px;
+         
+         height: 35px;
+         width: 130px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+         padding-left: 5px;
+       }
+
+       .a2 img
+       {
+        padding: 10px;
+
+       }
+       .a2 span
+       {
+        padding-bottom: 10px;
+        padding-left: 10px;
+        font-family: "Helvetica";
+        font-weight: bold;
+       }
+
+        .m2
+       {
+          display: flex;
+        flex-direction: row;
+        border: 1px solid white;
+        height: 35px;
+        background: white;
+       }
+
+       .a3
+       {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid white;
+        background: white;
+        color: blue;
+         border-bottom-left-radius: 25px;
+         border-bottom-right-radius: 25px;
+         border-top-left-radius: 25px;
+         border-top-right-radius: 25px;
+         
+         height: 35px;
+         width: 90px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+         margin-left: 5px;
+
+       }
+       
+       .a3 span
+       { 
+        color: gray;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        font-family: "Helvetica";
+        font-weight: bold;
+       }
+
+       .a4
+       {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-shrink: 2;
+        border: 1px solid white;
+        background: white;
+        color: blue;
+         border-bottom-left-radius: 25px;
+         border-bottom-right-radius: 25px;
+         border-top-left-radius: 25px;
+         border-top-right-radius: 25px;
+         
+         height: 35px;
+         width: 130px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+         /*margin-left: 0px;*/
+       }
+       
+       .a4 span
+       { 
+        color: gray;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        font-family: "Helvetica";
+        font-weight: bold;
+       }
+       .a5
+       {
+        display: flex;
+        flex-direction: row;
+        padding-left: 180px;
+        padding-top: 5px;
+       }
+
+        .n
+       {
+        display: flex;
+        flex-direction: row;
+        margin-top:15px;
+         border: 1px solid rgb(246,247,248);
+         background: white;
+         width: 700px;
+        height: 140px;
+
+       }
+       
+       .nc1
+       {
+         display: flex;
+         flex-direction: column;
+         background: rgb(248,248,250);
+       }
+       .nc1 span
+       {
+        font-weight: bold;
+        font-family: "Helvetica";
+       }
+
+       .nc2
+       {
+        display: flex;
+         flex-direction: column;
+         border: 1px solid white;
+         height: 60px;
+         width: 700px;
+
+         
+       }
+     .ncr1
+       {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+         font-size: 80%;
+        /*padding-bottom: 50px;*/
+
+       }
+       .ncr1 img
+       {
+        /*padding-left: 10px;
+        padding-right: 10px;*/
+       
+        
+       }
+       .ncr1 span
+       {
+        padding-left: 10px;
+        color: gray;
+       }
+       
+       .join
+        {   
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 50px;
+            border: 2px solid rgb(0,121,211);
+            /*margin-right: 50px;*/
+            padding-right: 10px;
+            margin-left: 150px;
+            /*padding-left: 0px;*/
+            margin-top: 5px;
+            margin-bottom: 10px;
+            height: 25px;
+            width:50px;
+            color: white;
+            background: rgb(0,121,211);
+            font-family: "Helvetica";
+            font-weight: bold;
+            border-bottom-left-radius:25px;
+            border-bottom-right-radius:25px;
+            border-top-right-radius:25px;
+            border-top-left-radius:25px;
+        }
+
+        .join span
+        {
+            
+            padding-left: 25px;
+            padding-bottom: 45px;
+            align-items: center;
+            font-family: "Arial";
+
+        }
+        .ncr2 
+        {
+           display:flex;
+           padding-left: 5px;
+        }
+
+
+         .ncr3
+         {
+            display: flex;
+            flex-direction: row;
+            padding-left: 20px;
+            
+         }
+
+         .o2
+         {   
+            padding-left: 10px;
+            padding-right: 10px;
+             /*font-weight: bold;*/
+             color: gray;
+             font-family: "Helvetica";
+
+         }
+         .o4
+         {  
+             padding-left: 10px;
+            padding-right: 10px;
+            /* font-weight: bold;*/
+             color: gray;
+             font-family: "Helvetica";
+         }
+
+         .o6
+         {
+              padding-left: 10px;
+            padding-right: 10px;
+             /*font-weight: bold;*/
+             color: gray;
+             font-family: "Helvetica";
+         }
+
+         .ll
+       {
+        display: flex;
+        flex-direction: row;
+        margin-top:15px;
+         border: 1px solid rgb(246,247,248);
+         background: white;
+         width: 700px;
+        height: 680px;
+
+       }
+
+         .lc1
+         {
+            display: flex;
+            flex-direction: column;
+         }
+
+        .lr1
+       {
+         display: flex;
+         flex-direction: column;
+         border: 1px solid  rgb(248,249,250);
+         height: 800px;
+         /*width:50px;*/
+         background: rgb(248,249,250);
+       }
+
+       .lr1 span
+       {
+        font-weight: bold;
+        font-family: "Arial";
+       }
+       /*.lr2
+       {
+        display: flex;
+        flex-direction: row;
+       }*/
+
+       .lz1
+       {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+         font-size: 80%;
+        /*padding-bottom: 50px;*/
+
+       }
+       .lz1 span
+       {
+        padding-left: 10px;
+        color: gray;
+        font-family: "Helvetica";
+       }
+       .join1
+        {   
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 50px;
+            border: 2px solid rgb(0,121,211);
+            /*margin-right: 50px;*/
+            padding-right: 10px;
+            margin-left: 85px;
+            /*padding-left: 0px;*/
+            margin-top: 5px;
+            margin-bottom: 10px;
+            height: 25px;
+            width:50px;
+            color: white;
+            background: rgb(0,121,211);
+            font-family: "Helvetica";
+            font-weight: bold;
+            border-bottom-left-radius:25px;
+            border-bottom-right-radius:25px;
+            border-top-right-radius:25px;
+            border-top-left-radius:25px;
+        }
+
+        .join1 span
+        {
+            
+            padding-left: 25px;
+            padding-bottom: 45px;
+            align-items: center;
+            font-family: "Arial";
+
+        }
+
+        .lz2
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        .b1
+        {
+            color: gray;
+            font-family: "Helvetica";
+            font-weight: bold;
+        }
+        .b2
+        {
+            padding-left: 100px;
+        }
+
+         .lz3
+         {
+            display: flex;
+            flex-direction: row;
+            padding-left: 20px;
+            
+         }
+
+         .o2
+         {   
+            padding-left: 10px;
+            padding-right: 10px;
+             /*font-weight: bold;*/
+             color: gray;
+             font-family: "Helvetica";
+
+         }
+         .o4
+         {  
+             padding-left: 10px;
+            padding-right: 10px;
+            /* font-weight: bold;*/
+             color: gray;
+             font-family: "Helvetica";
+         }
+
+         .o6
+         {
+              padding-left: 10px;
+            padding-right: 10px;
+             /*font-weight: bold;*/
+             color: gray;
+             font-family: "Helvetica";
+         }
+
+         .w
+         {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid rgb(218,224,230);
+            background: white;
+            height: 900px;
+            width: 300px;
+            margin-left: 40px;
+            margin-top: 55px;
+         }
+
+         .ww
+         {
+            display: flex;
+            flex-direction: column;
+         }
+
+         .ww img
+         {
+            width: 300px;
+         }
+
+         .wq1
+         {
+            display: flex;
+
+            flex-direction: row;
+            padding-left: 30px;
+            
+         }
+         .wq1 img
+         {
+           width: 50px;
+           height: 50px;
+           padding-right: 5px;
+         }
+
+         .brdr1
+         {
+            border: 1px solid lightgray;
+         }
+          .wq2
+         {
+            display: flex;
+
+            flex-direction: row;
+            padding-left: 30px;
+            
+         }
+         .wq2 img
+         {
+           width: 50px;
+           height: 50px;
+         }
+
+         .wq3
+         {
+            display: flex;
+
+            flex-direction: row;
+            padding-left: 30px;
+            
+         }
+         .wq3 img
+         {
+           width: 50px;
+           height: 50px;
+         }
+
+         .wq4
+         {
+            display: flex;
+
+            flex-direction: row;
+            padding-left: 30px;
+            
+         }
+         .wq4 img
+         {
+           width: 50px;
+           height: 50px;
+         }
+
+         .wq5
+         {
+            display: flex;
+
+            flex-direction: row;
+            padding-left: 30px;
+            
+         }
+         .wq5 img
+         {
+           width: 50px;
+           height: 50px;
+         }
+
+         .view
+        {   
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 50px;
+            border: 2px solid rgb(0,121,211);
+            /*margin-right: 50px;*/
+            padding-right: 10px;
+            margin-left: 20px;
+            /*padding-left: 0px;*/
+            margin-top: 5px;
+            margin-bottom: 10px;
+            height: 30px;
+            width:230px;
+            color: white;
+            background: rgb(0,121,211);
+            font-family: "Helvetica";
+            font-weight: bold;
+            border-bottom-left-radius:25px;
+            border-bottom-right-radius:25px;
+            border-top-right-radius:25px;
+            border-top-left-radius:25px;
+        }
+
+        .view span
+        {
+            
+            padding-left: 85px;
+            /*padding-bottom: 45px;*/
+            /*align-items: center;*/
+            font-family: "Helvetica";
+
+        }
+        .last
+        {
+            display: flex;
+            flex-direction: row;
+            font-size:80%;
+        }
+
+        .last1
+       {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid rgb(246,247,248);
+        background: rgb(246,247,248);
+        color: rgb(0,121,211);
+         border-bottom-left-radius: 25px;
+         border-bottom-right-radius: 25px;
+         border-top-left-radius: 25px;
+         border-top-right-radius: 25px;
+         
+         height: 25px;
+         width: 40px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+         padding-left: 2px;
+       }
+
+       .last1 span
+       {
+        padding-bottom: 10px;
+        padding-left: 5px;
+        font-family: "Helvetica";
+        font-weight: bold;
+       }
+
+        .last2
+       {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid rgb(246,247,248);
+        background: rgb(246,247,248);
+        color: rgb(0,121,211);
+         border-bottom-left-radius: 25px;
+         border-bottom-right-radius: 25px;
+         border-top-left-radius: 25px;
+         border-top-right-radius: 25px;
+         
+         height: 25px;
+         width: 70px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+         padding-left: 3px;
+       }
+
+       .last2 span
+       {
+        padding-bottom: 10px;
+        padding-left: 2px;
+        font-family: "Helvetica";
+        font-weight: bold;
+       }
+        .last3
+       {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid rgb(246,247,248);
+        background: rgb(246,247,248);
+        color: rgb(0,121,211);
+         border-bottom-left-radius: 25px;
+         border-bottom-right-radius: 25px;
+         border-top-left-radius: 25px;
+         border-top-right-radius: 25px;
+         
+         height: 25px;
+         width: 40px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+         padding-left: 2px;
+       }
+
+       .last3 span
+       {
+        padding-bottom: 10px;
+        padding-left: 2px;
+        font-family: "Helvetica";
+        font-weight: bold;
+       }
+
+        .last4
+       {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid rgb(246,247,248);
+        background: rgb(246,247,248);
+        color: rgb(0,121,211);
+         border-bottom-left-radius: 25px;
+         border-bottom-right-radius: 25px;
+         border-top-left-radius: 25px;
+         border-top-right-radius: 25px;
+         
+         height: 25px;
+         width: 50px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+         padding-left: 3px;
+       }
+
+       .last4 span
+       {
+        padding-bottom: 10px;
+        padding-left: 2px;
+        font-family: "Helvetica";
+        font-weight: bold;
+       }
+
+        .brdr2
+         {
+            border: 15px solid rgb(218,224,230);
+         }
+
+         .t1
+         {
+            display: flex;
+            flex-direction: column;
+         }
+
+         .t11
+         {
+            display: flex;
+            flex-direction: row;
+         }
+
+         .tt1
+         {
+            display: flex;
+            flex-direction: column;
+            /*font-weight: bold;*/
+            color: black;
+            font-family: "Helvetica";
+         }
+         .t11 img
+         {
+            width:100px;
+            height: 100px;
+         }
+         .tt1 span
+         {
+           color: black;
+           font-size:70%;
+           font-family: "Helvetica";
+          /* margin-top:-100px;*/
+
+         }
+
+        .t12
+        {   
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 50px;
+            border: 2px solid rgb(255,69,0);
+            /*margin-right: 50px;*/
+            padding-right: 10px;
+            margin-left: 20px;
+            /*padding-left: 0px;*/
+            margin-top: 5px;
+            margin-bottom: 10px;
+            height: 30px;
+            width:230px;
+            color: white;
+            background: rgb(255,69,0);
+            font-family: "Helvetica";
+            font-weight: bold;
+            border-bottom-left-radius:25px;
+            border-bottom-right-radius:25px;
+            border-top-right-radius:25px;
+            border-top-left-radius:25px;
+        }
+
+        .t12 span
+        {
+            
+            padding-left: 85px;
+            /*padding-bottom: 45px;*/
+            /*align-items: center;*/
+            font-family: "Helvetica";
+
+        }
+
+        .end
+        {
+            display: flex;
+            flex-direction: column;
+
+        }
+        
+        .end1
+        {
+            display: flex;
+            flex-direction: row;
+        }
+        .end2
+        {
+            color: black;
+            font-family: "Helvetica";
+            padding-left: 10px;
+
+        }
+
+        .e1
+        {
+            font-size:65%;
+            color: black;
+            padding-left: 30px;
+            padding-right: 50px;
+            font-family: "Helvetica";
+        }
+        .e2
+        {
+            font-size:65%;
+            color: black;
+            padding-left: 10px;
+            font-family: "Helvetica";
+        }
+
+
+
+		
+
+	</style>
+</head>
+<body>
+	<div class="top">
+		<img src="1.png">
+		<img src="101.png"> <!-- //orange I dot******** -->
+
+		<div class="top1">
+             <img src="11.png">
+             <p><span>Search Reddit</span></p>
+
+		</div>
+
+		 <div class="login">
+		 	<p><span>Log In</span></p>
+		 </div>
+
+		 <div class="signup">
+		 	<p><span>Sign Up</span></p>
+		 </div>
+          
+		 <img src="2.png">
+		 <img src="3.png">
+	</div> 
+
+    <div class="main">
+
+	<div class="mid">
+
+		<div class="midl1">
+            <p><span> Popular posts </span></p>
+             <div class="m">
+            <div class="m1">
+                 <div class="a1">
+                    <img src="4.png">
+                    <p><span>Hot</span></p>
+                 </div>
+            </div>
+            <div class="m2">
+                 <div class="a2">
+                    <p><span>Everything</span></p>
+                     <img src="12.png">
+                 </div>
+            </div>
+            <div class="m3">
+                 <div class="a3">
+                     <img src="5.png">
+                     <p><span>New</span></p>
+                 </div>
+            </div>
+            <div class="m4">
+                 <div class="a4">
+                     <img src="6.png">
+                     <p><span>Top</span></p>
+                     <img src="13.png">
+                 </div>
+            </div>
+            <div class="m5">
+                 <div class="a5">
+                     <img src="7.png">
+                     
+                     <img src="8.png">
+                 </div>
+            </div>
+
+		</div>
+
+        <div class="n">
+             <div class="nc1">
+                 <img src="14.png">
+                 <p><span>14.9k</span></p>
+                 <img src="15.png">
+             </div>
+             <div class="nc2">
+                <div class="ncr1">
+                    <img src="16.png">
+                    <p>r/ASkReddit </p>
+                    <p><span> Posted by a/pokeboy26  10 hours ago</span></p>
+                    <img src="17.png">
+                     <div class="join">
+                        <img src="23.png">
+                        <p> Join</p>
+                     </div>
+                </div>
+                <div class="ncr2">
+                    <h4><span> Which celebrity voices are instantly recognizable?</span></h4>
+                </div>
+                <div class="ncr3">
+                    <div class="o1"><img src="18.png"></div>
+                    <div class="o2"><p>10.4k comments</p></div>
+                    <div class="o3"><img src="19.png"></div>
+                    <div class="o4"><p>Share</p></div>
+                    <div class="o5"><img src=20.png></div>
+                    <div class="o6"><p>Save</p></div>
+                    <div class="o7"><img src="13.png"></div>
+                </div>
+        </div>
+
+       
+    </div>
+     <div class="ll">
+            <div class="lc1">
+                <div class="lr1">
+                    
+                 <img src="14.png">
+                 <p><span>49.8k</span></p>
+                 <img src="15.png">
+            
+                </div>
+
+                </div>
+                <div class="lr2">
+                    <div class="lz1">
+                         <img src="21.png">
+                         <p>r/antiwork</p>
+                         <p><span>Posted by u/funtimes1516 6 hours ago</span></p>
+                         <img src="22.png">
+                         <div class="join1">
+                            <img src="23.png">
+                            <p>Join</p>
+                    </div>
+
+
+            </div>
+            <div class="lz2">
+                        <div class="b1">
+                            <p>They started paying us $15/hr last week..</p>
+                        </div>
+                        <div class="b2">
+                            <img src="24.png">
+                        </div>
+            </div>
+
+                <div class="lz3">
+                    <div class="o1"><img src="18.png"></div>
+                    <div class="o2"><p>8.0k comments</p></div>
+                    <div class="o3"><img src="19.png"></div>
+                    <div class="o4"><p>Share</p></div>
+                    <div class="o5"><img src=20.png></div>
+                    <div class="o6"><p>Save</p></div>
+                    <div class="o7"><img src="13.png"></div>
+                </div>
+                    </div>
+
+        </div>
+
+         
+
+</div>
+    <div class="w">
+         <div class="ww">
+         <img src="9.png">
+
+         <div class="wq1">
+            <p>1</p>
+            <img src="25.png">
+            <img src="26.png">
+            <p>r/pcmasterrace</p>
+           
+         </div>
+          <div class="brdr1">
+            </div>
+            <div class="wq2">
+            <p>2</p>
+            <img src="25.png">
+            <img src="27.png">
+            <p>r/Minecraft</p>
+         </div>
+          <div class="brdr1">
+          </div>
+            <div class="wq3">
+            <p>3</p>
+            <img src="25.png">
+            <img src="28.png">
+            <p>r/skyrim</p>
+           
+        </div>
+          <div class="brdr1">
+          </div>
+
+        <div class="wq4">
+            <p>4</p>
+            <img src="25.png">
+            <img src="29.png">
+            <p>r/xboxone</p>
+           
+        </div>
+          <div class="brdr1">
+          </div>
+        <div class="wq5">
+            <p>5</p>
+            <img src="25.png">
+            <img src="30.png">
+            <p>r/xboxone</p>
+           
+        </div>
+          <!-- <div class="brdr1">
+          </div> -->
+          <div class="view">
+                <p><span>View All</span></p>
+          </div>
+
+          <div class="last">
+            <div class="last1">
+            <p><span>Top</span></p>
+            </div>
+            <div class="last2">
+            <p><span>Near You</span></p>
+            </div>
+            <div class="last3">
+            <p><span>News</span></p>
+            </div>
+            <div class="last4">
+            <p><span>Aww</span></p>
+            </div>
+          </div>
+          <div class="brdr2">
+          </div>
+
+          <div class="t1">
+             <div class="t11">
+                <img src="31.png">
+                <div class="tt1">
+                    <p>Reddit Premium</p>
+                    <p><span> The best Reddit experience with monthly Coins</span></p>
+                </div>
+
+             </div>
+             <div class="t12">
+                <p><span>Try Now</span></p>
+             </div>
+
+         </div>
+          <div class="brdr2">
+          </div>
+
+          <div class="end">
+            <div class="end1">
+                <div class="e1">
+                    <p>Help</p>
+                    <p>Reddit Coins</p>
+                    <p>Reddit Premium</p>
+                    <p>Reddit gIfts</p>
+                    <p>Communities</p>
+                    <p>Rereddit</p>
+                    <p>Topics</p>
+                </div>
+                <div class="e2">
+                     <p>About</p>
+                    <p>Careers</p>
+                    <p>Press</p>
+                    <p>Advertise</p>
+                    <p>Blog</p>
+                    <p>Terms</p>
+                    <p>Content Policy</p>
+                    <p>Privacy Policy</p>
+                    <p>Mod Policy</p>
+                </div>
+
+            </div>
+            <div class="end2">
+                <p>Reddit Inc © 2021 . All rights reserved </p>
+            </div>
+          </div>
+
+
+         </div>
+       
+
+        
+    </div>
+
+</div>
+        
+
+        
+	
+
+
+</body>
+</html>
